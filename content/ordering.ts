@@ -141,6 +141,7 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
         // promoted from foundations
         'vieta-formulas',
         'polynomial-manipulations',
+        'function-basics',
         'telescoping',
       ],
     },
