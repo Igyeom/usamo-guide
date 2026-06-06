@@ -130,6 +130,12 @@ MDX supports React components used by the site. Example patterns:
 
 <ComponentName prop1="value" />
 
+For centered image callouts, use `FigureBox`:
+
+<FigureBox image="/images/example.png" alt="Example diagram" title="Key idea">
+	Put your supporting text here.
+</FigureBox>
+
 Only components supported by the site will render properly.
 
 ## Tips

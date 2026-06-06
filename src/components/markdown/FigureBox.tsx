@@ -1,0 +1,52 @@
+import * as React from 'react';
+
+export interface FigureBoxProps {
+  image?: React.ReactNode | string;
+  alt?: string;
+  title?: React.ReactNode;
+  children?: React.ReactNode;
+  className?: string;
+  imageClassName?: string;
+}
+
+const FigureBox: React.FC<FigureBoxProps> = ({
+  image,
+  alt,
+  title,
+  children,
+  className = '',
+  imageClassName = '',
+}) => {
+  const renderedImage =
+    typeof image === 'string' ? (
+      <img
+        src={image}
+        alt={alt ?? ''}
+        className={`block w-full object-cover ${imageClassName}`}
+      />
+    ) : (
+      image
+    );
+
+  return (
+    <figure className={`my-8 flex justify-center px-4 ${className}`.trim()}>
+      <div className="w-full max-w-3xl overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg shadow-gray-200/60">
+        {renderedImage && (
+          <div className="border-b border-gray-200 bg-white">
+            {renderedImage}
+          </div>
+        )}
+        <div className="px-6 py-5 text-gray-700">
+          {title && (
+            <div className="mb-2 text-center text-sm font-semibold uppercase tracking-wide text-gray-500">
+              {title}
+            </div>
+          )}
+          <div className="no-y-margin">{children}</div>
+        </div>
+      </div>
+    </figure>
+  );
+};
+
+export default FigureBox;

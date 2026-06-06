@@ -4,6 +4,7 @@ import Asterisk from '../Tooltip/Asterisk';
 import CodeBlock from './CodeBlock/CodeBlock';
 import TextTooltip from '../Tooltip/TextTooltip';
 import FocusProblem from './FocusProblem';
+import FigureBox from './FigureBox';
 import HTMLComponents from './HTMLComponents';
 import { IncompleteSection } from './IncompleteSection';
 import Info from './Info';
@@ -85,6 +86,7 @@ export const components = {
   YouTube,
   PrefixSumInteractive,
   Quiz,
+  FigureBox,
   MATHDIV,
   MATHSPAN,
   AsyDiagram,
