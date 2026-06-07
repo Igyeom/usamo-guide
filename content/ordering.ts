@@ -15,7 +15,7 @@ export type Chapter = {
 const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
   foundations: [
     {
-      name: 'Arithmetic',
+      name: 'Basic Arithmetic and Notation',
       description: 'Speed, mental math, and fluency with core numerical operations.',
       items: [
         'arithmetic-nt-basics',
@@ -31,7 +31,7 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
       name: 'Data',
       description: 'Interpreting data, central tendency, and organizing information visually.',
       items: [
-        'mean-median-mode-harmonic',
+        'mean-median-mode-range',
         'chart-graph-interpretation',
         'venn-diagrams-sets',
       ],
@@ -40,7 +40,6 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
       name: 'Algebra',
       description: 'Translating problems into equations, solving systems, and pattern recognition.',
       items: [
-        'algebra-basics',
         'word-problems',
         'word-problem-translation',
         'linear-equations-inequalities',
